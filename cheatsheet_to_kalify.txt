@@ -1,0 +1,27 @@
+# Create custom user
+sudo adduser <HERE_YOUR_USERNAME>
+
+Add user to sudoers
+sudo usermod -aG sudo <HERE_YOUR_USERNAME>
+
+# Switch to recently created user
+su <HERE_YOUR_USERNAME>
+
+# Edit file to disable console for root and default user (debian). To do this, put /bin/false as shell
+sudo vim /etc/passwd
+
+(snapshot)
+
+# Install MATE environment
+sudo apt update && sudo apt install mate-desktop-environment
+
+# Install NoMachine server
+wget https://download.nomachine.com/download/7.10/Linux/nomachine_7.10.1_1_amd64.deb
+sudo dpkg -i nomachine_7.10.1_1_amd64.deb
+
+(snapshot)
+
+#Install Kali Tools (makekali.sh)
+wget https://gist.githubusercontent.com/warecrash/f35d4f9a822c452b0c54bbdb47c0c9a5/raw/8f7055e1cde8ae03f19f57d0154f259e9f8f3060/makekali.sh
+sudo chmod +x makekali.sh
+sudo ./makekali.sh
